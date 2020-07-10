@@ -28,6 +28,11 @@ export class TodoService {
     return this.http.delete<Todo>(url, todo, httpOptions);
   }
 
+  // add todo
+  addTodo(Todo: todo):Observable<Todo>{
+    return this.http.post<Todo>(this.todosUrl, todo, httpOptions);
+  }
+
 
   // toggle completed
   toggleCompleted(todo: Todo):Observable<any> {
